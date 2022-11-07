@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    position: relative;
 }
 
 header{
@@ -16,9 +17,14 @@ header{
 main{
     background-color: #dadbd3; 
     width: 100vw;
-    height: calc(100% - 12vh);
+    height: calc(100vh - 12vh);
 }
 
 .main-wrapper{
+    position: absolute;
     background-color: #eaeaea;
+    top: 5vh;
+    left: 10vw;
+    width: 80vw;
+    height: 90vh;
 }
