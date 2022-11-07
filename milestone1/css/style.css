@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    background-color: #009688;
+    width: 100vw;
+    height: 12vh;
+}
+main{
+    background-color: #dadbd3; 
+    width: 100vw;
+    height: calc(100% - 12vh);
+}
+
+.main-wrapper{
+    background-color: #eaeaea;
+}
