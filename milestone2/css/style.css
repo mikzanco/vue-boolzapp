@@ -88,7 +88,7 @@ body{
 .new-notification i{
     color: #8edafc;
     background-color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 5px;
     border-radius: 50%;
 }
@@ -128,15 +128,17 @@ body{
 }
 
 .main-wrapper-right-footer .i{
-    margin: 6px;
+    margin: 1%;
     font-size: 1.3rem;
     color: #6B7377;
 }
 
 .main-wrapper-right-footer .input-msg .msg{
-    height: 90%;
+    height: 67%;
     width: 100%;
     border: none;
+    margin: 1%;
+    padding: 2%;
 }
 
 .icons{
@@ -146,7 +148,7 @@ body{
 .icons i{
     font-size: 1.1rem;
     color: #808080;
-    padding: 2px;
+    padding: 7px;
 }
 
 .main-wrapper .avatar img{
@@ -193,4 +195,31 @@ img{
 
 .user{
     width: 50%;
+}
+
+.chat-place{
+    height: calc(100% - 18%);
+    width: 100%;
+    flex-direction: column;
+}
+
+.sent{
+    background-color: #98daa3;
+    float: right;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 2%;
+}
+
+.sent, .received{
+    padding: 1%;
+}
+
+.received{
+    background-color: white;
+    float: left;
+    border-radius: 10px;
+
+    margin-left: 15px;
+    margin-top: 7%;
 }
