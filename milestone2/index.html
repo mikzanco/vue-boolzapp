@@ -59,7 +59,9 @@
             <div class="chats">
                 <ul v.if="contacts.length > 0">
                     <li
-                    v-for="(contact, index) in contacts">
+                    v-for="(contact, index) in contacts"
+                    @click="changeChat(index)"
+                    :class="{'active': index === activeChat}">
                         <div class="chat d-flex">
                         <div class="avatar-name d-flex">
                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
@@ -90,10 +92,10 @@
             <div class="main-wrapper-right-header d-flex main-height">
                 <div class="user d-flex " >
                     <div class="d-flex avatar">
-                        <img src="" alt="">
+                        <img :src="`img/avatar${contacts[activeChat].avatar}.jpg`" alt="">
                     </div>
                     <div class="avatar-name-text">
-                        <p class="name">Michele</p>
+                        <p class="name">{{ contacts[activeChat].name }}</p>
                         <span>Ultimo Accesso alle 12:00</span>
                     </div>
                 </div>
@@ -106,11 +108,10 @@
             </div>
 
             <div class="chat-place">
-                <ul>
+                <ul  v-for="(message, index) in contacts[activeChat].messages">
                     <li class="sent">ciao come stai?</li>
                     <li class="received">tutto bene grazie!</li>
-                    <li class="sent">ciao come stai?</li>
-                    <li class="received">tutto bene grazie!</li>
+                    
                 </ul>
                 
             </div>

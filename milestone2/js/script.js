@@ -171,13 +171,14 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            activeChat: 2
                     
         }
     },
     methods:{
-        getImgUrl(pic){
-            return require('')
+        changeChat(index){
+            this.activeChat = index;
         }
     },
     mounted(){

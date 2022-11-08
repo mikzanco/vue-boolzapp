@@ -223,3 +223,7 @@ img{
     margin-left: 15px;
     margin-top: 7%;
 }
+
+.active{
+    background-color: #6B7377;
+}
