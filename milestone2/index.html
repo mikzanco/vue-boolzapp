@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+    <!-- fontAwesom CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="d-flex" >
+
+
+
+    <div id="app" class="container">
+
+        <div class="main-wrapper-left">
+            <div class="main-wrapper-left-header d-flex main-height">
+                <div class="d-flex">
+                    <div class="avatar">
+                        <img src="img/avatar_io.jpg" alt="">
+                    </div>             
+                    <span class="align-center">Sofia</span>    
+                </div>
+                <div class="d-flex icons">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="new-notification d-flex main-height">
+                <div>
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div>
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+                
+            </div>
+
+            <div class="input-group mb-2">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input class="input-search" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
+                
+            </div>
+            <div class="chats">
+                <ul v.if="contacts.length > 0">
+                    <li
+                    v-for="(contact, index) in contacts">
+                        <div class="chat d-flex">
+                        <div class="avatar-name d-flex">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                            <p class="name">{{contact.name}}</p>
+                        </div>
+                        <div class="time">
+                            <span>12:00</span>
+                        </div>
+                    </div>
+                    </li>
+
+                </ul>
+                
+                
+                
+                
+            </div>
+            
+
+        </div>
+
+        <div class="main-wrapper-right d-flex">
+            <div class="main-wrapper-right-header d-flex main-height">
+                <div class="d-flex">
+                    <div class="d-flex avatar">
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <p class="name">Michele</p>
+                        <span>Ultimo Accesso alle 12:00</span>
+                    </div>
+                </div>
+
+                <div class="d-flex icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="main-wrapper-right-footer d-flex main-height">
+                <div class="i">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <div class="input-msg">
+                    <input class="msg" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
+                </div>
+                <div class="i">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
