@@ -53,7 +53,7 @@ body{
 .main-wrapper-left-header, .main-wrapper-right-header{
     background-color: #eaeaea;
     justify-content: space-between;
-    height: 7vh;
+    height: 10vh;
 }
 
 .main-wrapper-right{
@@ -67,7 +67,7 @@ body{
 }
 
 .main-height{
-    height: 7%;
+    height: 9%;
     width: 100%;
 }
 
@@ -115,6 +115,7 @@ body{
     width: 80%;
     float: right;
     border: none;
+    margin-top: 5px;
 }
 
 .input-group i{
@@ -160,13 +161,36 @@ img{
 
 .chat{
     justify-content: space-between;
-    padding: 5px;
+    align-items: center;
+    padding: 1.5%;
 }
 
+.chat .time{
+    color: rgb(148, 146, 146);
+    font-size: 0.7rem;
+}
+
+.avatar-name{
+    width: 50%;
+}
+
+.avatar-name-text{
+    padding-left: 15%;
+}
+
+.avatar-name-text span{
+    color: rgb(148, 146, 146);
+    font-size: 0.7rem;
+}
 .chats{
-    height: calc(94vh - 7vh - 9vh - 5vh);
+    height: calc(94vh - 9vh - 9vh - 5vh);
+    overflow-y: scroll;
 }
 
 .chats ul{
     list-style: none;
+}
+
+.user{
+    width: 50%;
 }

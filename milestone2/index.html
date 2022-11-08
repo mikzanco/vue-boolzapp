@@ -63,7 +63,12 @@
                         <div class="chat d-flex">
                         <div class="avatar-name d-flex">
                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
-                            <p class="name">{{contact.name}}</p>
+                            
+                            <div class="avatar-name-text">
+                                <p class="name">{{contact.name}}</p>
+                                <span>Ultimo messaggi</span>
+                            </div>
+                            
                         </div>
                         <div class="time">
                             <span>12:00</span>
@@ -83,11 +88,11 @@
 
         <div class="main-wrapper-right d-flex">
             <div class="main-wrapper-right-header d-flex main-height">
-                <div class="d-flex">
+                <div class="user d-flex">
                     <div class="d-flex avatar">
                         <img src="" alt="">
                     </div>
-                    <div>
+                    <div class="avatar-name-text">
                         <p class="name">Michele</p>
                         <span>Ultimo Accesso alle 12:00</span>
                     </div>
@@ -99,6 +104,11 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
+
+
+
+
+
             <div class="main-wrapper-right-footer d-flex main-height">
                 <div class="i">
                     <i class="fa-regular fa-face-smile"></i>
