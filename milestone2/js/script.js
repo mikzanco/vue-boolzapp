@@ -172,7 +172,7 @@ createApp({
                     ],
                 }
             ],
-            activeChat: 2
+            activeChat: 0
                     
         }
     },
