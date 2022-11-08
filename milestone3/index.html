@@ -127,7 +127,13 @@
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
                 <div class="input-msg">
-                    <input class="msg" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
+                    <input 
+                    
+                    type="text"
+                    @keyup.enter="createMessage()"
+                    v-model="newMessageString"
+                    
+                    placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
                 </div>
                 <div class="i">
                     <i class="fa-solid fa-microphone"></i>
