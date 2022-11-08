@@ -108,11 +108,14 @@
             </div>
 
             <div class="chat-place">
-                <ul  v-for="(message, index) in contacts[activeChat].messages">
-                    <li class="sent">ciao come stai?</li>
-                    <li class="received">tutto bene grazie!</li>
+                <div  v-for="message in contacts[activeChat].messages">
+                    <div>
+                        <p>{{message.message}}</p>
+                        <p>{{message.date}}</p>
+                    </div>
                     
-                </ul>
+                    
+                </div>
                 
             </div>
 
