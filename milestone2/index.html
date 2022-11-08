@@ -108,13 +108,14 @@
             </div>
 
             <div class="chat-place">
-                <div  v-for="message in contacts[activeChat].messages">
-                    <div>
-                        <p>{{message.message}}</p>
-                        <p>{{message.date}}</p>
-                    </div>
-                    
-                    
+                <div 
+                class="d-flex" 
+                v-for="message in contacts[activeChat].messages"
+                :class="message.status">
+
+                    <p>{{message.message}}</p>
+                    <p>{{message.date}}</p>
+
                 </div>
                 
             </div>
