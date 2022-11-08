@@ -62,7 +62,7 @@
                     v-for="(contact, index) in contacts">
                         <div class="chat d-flex">
                         <div class="avatar-name d-flex">
-                            <img :src="'img/avatar/' + {{contact.avatar}} + '/.jpg'" alt="">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             <p class="name">{{contact.name}}</p>
                         </div>
                         <div class="time">
