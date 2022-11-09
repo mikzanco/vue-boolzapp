@@ -1,5 +1,7 @@
 const { createApp } = Vue;
-    
+const DateTime = luxon.DateTime;
+const now = DateTime.now();
+console.log(now);
 createApp({
     data(){
         
@@ -204,7 +206,7 @@ createApp({
             console.log(this.search);
             this.contacts.forEach(utente => {
                 if(utente.name.includes(search)){
-                    
+                    console.log(utente.name);
                 }
             });
             // cambia il visibile di tutte le chat in false 
