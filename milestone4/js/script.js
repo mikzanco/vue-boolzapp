@@ -1,14 +1,15 @@
 const { createApp } = Vue;
-
+    
 createApp({
     data(){
+        
         return{
             newMessageString: '',
             contacts: [
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: true,
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -188,7 +189,7 @@ createApp({
             }
             this.contacts[this.activeChat].messages.push(newMessage);
             this.newMessageString = '';
-            setTimeout(this.replyMessage, 1000)
+            setTimeout(this.replyMessage, 3000)
         },
         replyMessage(){
             const newMessage={
@@ -196,6 +197,22 @@ createApp({
                 status: 'received',
             }
             this.contacts[this.activeChat].messages.push(newMessage);
+        },
+        findChat(){
+            // al click di un tasto la funzione parte
+            console.log('ok');
+
+            // cambia il visibile di tutte le chat in false 
+            // se visible è false allora aggiungo d-none a quella chat.
+            // cerca se la lettera è all'interno delle lettere dei nomi nei contatti.
+            // se è cosi aggiunge a visibile il true 
+            // altrimenti rimane false e la chat non si vedrà.
+
+        },
+        nascondiChat(){
+            if(this.contacts.visible === false){
+                
+            }
         }
     },
     mounted(){

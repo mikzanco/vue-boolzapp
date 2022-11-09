@@ -180,7 +180,7 @@ img{
     padding-left: 15%;
 }
 
-.avatar-name-text span{
+.avatar-name-text span, .message-text span{
     color: rgb(148, 146, 146);
     font-size: 0.7rem;
 }
@@ -226,4 +226,8 @@ img{
 
 .active{
     background-color: #6B7377;
+}
+
+.d-none{
+    display: none;
 }

@@ -53,12 +53,18 @@
 
             <div class="input-group mb-2">
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input class="input-search" type="text" placeholder="Cerca o iniza un nuova chat" aria-label=".form-control-sm example">
+                <input 
+                class="input-search" 
+                @keyup="findChat()"
+                type="text" 
+                placeholder="Cerca o iniza un nuova chat" 
+                aria-label=".form-control-sm example">
                 
             </div>
             <div class="chats">
                 <ul v.if="contacts.length > 0">
                     <li
+                    :class="{'findChat()': contacts.visible = false}"
                     v-for="(contact, index) in contacts"
                     @click="changeChat(index)"
                     :class="{'active': index === activeChat}">
@@ -109,12 +115,12 @@
 
             <div class="chat-place">
                 <div 
-                class="d-flex" 
+                class="d-flex message-text" 
                 v-for="message in contacts[activeChat].messages"
                 :class="message.status">
 
                     <p>{{message.message}}</p>
-                    <p>{{message.date}}</p>
+                    <span>{{message.date}}</span>
 
                 </div>
                 
