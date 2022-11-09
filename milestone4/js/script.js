@@ -177,6 +177,7 @@ createApp({
                 }
             ],
             activeChat: 0,
+            // stringa vuota di search presa dal v-model dell'input
             search: '',
                     
         }
@@ -186,6 +187,7 @@ createApp({
             this.activeChat = index;
         },
         createMessage(){
+            // creo il messagggio dell'utente generato dal campo di input text e inviato con un @keyup.enter
             const newMessage ={
                 message: this.newMessageString,
                 status: 'sent',
@@ -195,6 +197,7 @@ createApp({
             setTimeout(this.replyMessage, 3000)
         },
         replyMessage(){
+            // creo il messaggio di risposta automatico.
             const newMessage={
                 message: 'ok!',
                 status: 'received',
@@ -203,25 +206,19 @@ createApp({
         },
         findChat(){
             // al click di un tasto la funzione parte
+            // fa il ciclo delle chat che inizialemnte sono tutte visibili.
+
             this.contacts.forEach(utente => {
                 utente.visible = true;
+                // se il nome dell'utente NON include la o le lettere  sctitte nell'input allora il visible di quel utente diventrea false. Per il v-show scritto nel html (v-show=?contacts.visible') ci ritorna una booleana, se true il v-show mostra. se false il v-show cancella. 
                 if(!utente.name.toLowerCase().includes(this.search.toLowerCase())){
                     utente.visible = false;
                 }
             });
-            // cambia il visibile di tutte le chat in false 
-            // se visible è false allora aggiungo d-none a quella chat.
-            // cerca se la lettera è all'interno delle lettere dei nomi nei contatti.
-            // se è cosi aggiunge a visibile il true 
-            // altrimenti rimane false e la chat non si vedrà.
+           
 
         },
-        nascondiChat(){
-            if(this.contacts.visible === false){
-                // aggiungere la classe display-none alle chat che diventerano false
-                // successivamente agli oggetti con visible true togliere la classe d-none
-            }
-        }
+        
     },
     mounted(){
 
