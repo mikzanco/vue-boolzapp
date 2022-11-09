@@ -32,7 +32,7 @@ createApp({
                 {
                     name: 'Fabio',
                     avatar: '_2',
-                    visible: true,
+                    visible: false,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -175,6 +175,7 @@ createApp({
                 }
             ],
             activeChat: 0,
+            search: '',
                     
         }
     },
@@ -200,8 +201,12 @@ createApp({
         },
         findChat(){
             // al click di un tasto la funzione parte
-            console.log('ok');
-
+            console.log(this.search);
+            this.contacts.forEach(utente => {
+                if(utente.name.includes(search)){
+                    
+                }
+            });
             // cambia il visibile di tutte le chat in false 
             // se visible è false allora aggiungo d-none a quella chat.
             // cerca se la lettera è all'interno delle lettere dei nomi nei contatti.
@@ -211,7 +216,8 @@ createApp({
         },
         nascondiChat(){
             if(this.contacts.visible === false){
-                
+                // aggiungere la classe display-none alle chat che diventerano false
+                // successivamente agli oggetti con visible true togliere la classe d-none
             }
         }
     },

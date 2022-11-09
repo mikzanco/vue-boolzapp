@@ -52,8 +52,11 @@
             </div>
 
             <div class="input-group mb-2">
+
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                
                 <input 
+                v-model="search"
                 class="input-search" 
                 @keyup="findChat()"
                 type="text" 
@@ -61,27 +64,36 @@
                 aria-label=".form-control-sm example">
                 
             </div>
+
             <div class="chats">
                 <ul v.if="contacts.length > 0">
                     <li
+                    
                     :class="{'findChat()': contacts.visible = false}"
                     v-for="(contact, index) in contacts"
+                    v-show="contact.visible"
                     @click="changeChat(index)"
                     :class="{'active': index === activeChat}">
+
                         <div class="chat d-flex">
-                        <div class="avatar-name d-flex">
-                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+
+                            <div class="avatar-name d-flex">
+
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             
-                            <div class="avatar-name-text">
-                                <p class="name">{{contact.name}}</p>
-                                <span>Ultimo messaggi</span>
+                                    <div class="avatar-name-text">
+                                        <p class="name">{{contact.name}}</p>
+                                        <span>Ultimo messaggi</span>
+                                    </div>
+                            
                             </div>
-                            
+
+                            <div class="time">
+                                <span>12:00</span>
+                            </div>
+
                         </div>
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </div>
+
                     </li>
 
                 </ul>
@@ -95,15 +107,20 @@
         </div>
 
         <div class="main-wrapper-right d-flex">
+
             <div class="main-wrapper-right-header d-flex main-height">
+
                 <div class="user d-flex " >
+
                     <div class="d-flex avatar">
                         <img :src="`img/avatar${contacts[activeChat].avatar}.jpg`" alt="">
                     </div>
+
                     <div class="avatar-name-text">
                         <p class="name">{{ contacts[activeChat].name }}</p>
                         <span>Ultimo Accesso alle 12:00</span>
                     </div>
+
                 </div>
 
                 <div class="d-flex icons">
@@ -111,9 +128,11 @@
                     <i class="fa-solid fa-paperclip"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
+
             </div>
 
             <div class="chat-place">
+
                 <div 
                 class="d-flex message-text" 
                 v-for="message in contacts[activeChat].messages"
@@ -129,9 +148,11 @@
 
 
             <div class="main-wrapper-right-footer d-flex main-height">
+                
                 <div class="i">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
+
                 <div class="input-msg">
                     <input 
                     class="msg"
@@ -141,10 +162,13 @@
                     
                     placeholder="Scrivi un messaggio" aria-label=".form-control-sm example">
                 </div>
+
                 <div class="i">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
+
             </div>
+
         </div> 
 
     </div>

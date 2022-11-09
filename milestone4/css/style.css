@@ -93,8 +93,6 @@ body{
     border-radius: 50%;
 }
 
-
-
 .main-wrapper .main-wrapper-left .input-group{
     height: 6%;
     background-color: rgb(255, 255, 255);
@@ -184,6 +182,7 @@ img{
     color: rgb(148, 146, 146);
     font-size: 0.7rem;
 }
+
 .chats{
     height: calc(94vh - 9vh - 9vh - 5vh);
     overflow-y: scroll;
