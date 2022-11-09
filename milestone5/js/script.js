@@ -1,7 +1,9 @@
 const { createApp } = Vue;
-// const DateTime = luxon.DateTime;
-// const now = DateTime.now();
-// console.log(now);
+
+const DateTime = luxon.DateTime;
+        const now = DateTime.now();
+        
+    const dateNow = now.setLocale('it').toFormat('t');
 createApp({
     data(){
         
@@ -179,8 +181,9 @@ createApp({
             activeChat: 0,
             // stringa vuota di search presa dal v-model dell'input
             search: '',
-                    
+            
         }
+        
     },
     methods:{
         changeChat(index){
@@ -191,6 +194,7 @@ createApp({
             const newMessage ={
                 message: this.newMessageString,
                 status: 'sent',
+                date: dateNow,
             }
             this.contacts[this.activeChat].messages.push(newMessage);
             this.newMessageString = '';
@@ -201,6 +205,7 @@ createApp({
             const newMessage={
                 message: 'ok!',
                 status: 'received',
+                date: dateNow,
             }
             this.contacts[this.activeChat].messages.push(newMessage);
         },

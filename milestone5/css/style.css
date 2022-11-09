@@ -230,3 +230,12 @@ img{
 .d-none{
     display: none;
 }
+
+.more-info{
+    display: none;
+}
+
+.message-text:hover + .more-info {
+    display: block;
+    
+}
